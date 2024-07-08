@@ -44,7 +44,7 @@ public class hote_booking {
 		Thread.sleep(4000);
 		driver.findElement(By.xpath("//button[normalize-space()='Apply']")).click();
 		Thread.sleep(4000);
-		driver.findElement(By.id("appliedFilter")).click();
+		driver.findElement(By.xpath("//p[@class='font14 greyText']")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//li[contains(text(),'₹5000+')]")).click();
 		Thread.sleep(3000);
