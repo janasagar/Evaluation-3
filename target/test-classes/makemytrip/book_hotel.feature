@@ -15,4 +15,4 @@ Feature: Makemytrip hotel booking
     And User click on Book now button
     And User enter Guest details
     And User click on pay now button
-    Then User Should redirect to chackout page
+    Then User Should redirect to chackout page, close the browser
