@@ -2,13 +2,17 @@ package step_def;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import java.time.Duration;
 
-public class hote_booking {
+public class hotel_booking {
 	
 	WebDriver driver;
 	
@@ -58,13 +62,16 @@ public class hote_booking {
 	    // Write code here that turns the phrase above into concrete actions
 		driver.findElement(By.id("hsw_search_button")).click();
 		
+		
 	    
 	}
 
 	@Then("Hotels should be displayed")
 	public void hotels_should_be_displayed() {
 	    // Write code here that turns the phrase above into concrete actions
-	    
+		WebElement ls = driver.findElement(By.id("hotelListingContainer"));
+		WebDriverWait prd = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    prd.until(ExpectedConditions.visibilityOf(ls));
 	}
 
 	@Then("User list the hotel names")
