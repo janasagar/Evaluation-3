@@ -8,7 +8,7 @@ Book a hotle in MakeMyTrip Web Application
 2. Page Object Model
 3. Screenshot capture of test failure
 4. HTML report generator
-5. Paralle testing
+5. Parallel testing
 6. Cross-browser capable
 7. Logging feature for debugging purposes
 8. Retry mechanism for faild cases
